@@ -16,6 +16,10 @@ header{
 
 }
 
+button {
+  border: none;
+}
+
 .mainHeader {
  display: flex;
  width: 100%;
@@ -79,7 +83,7 @@ header{
   width: 100%;
 }
 
-.fa-circle-xmark {
+.xmark {
   color: red;
   font-size: 3rem;
   cursor: pointer;
@@ -87,9 +91,12 @@ header{
 }
 
 
-.fa-pencil {
+.pencil {
   cursor: pointer;
   background-color: rgb(202, 177, 151);
   margin-left: 20px;
   font-size: 2.5rem;
+}
+.fa-solid {
+  background-color: rgb(202, 177, 151);;
 }
