@@ -67,6 +67,7 @@ button {
 
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: rgb(202, 177, 151);
 
   border: 2px solid black;
@@ -99,4 +100,20 @@ button {
 }
 .fa-solid {
   background-color: rgb(202, 177, 151);;
+}
+
+.listElement input {
+  font-size: 3rem;
+}
+
+.listElement .okContainer {
+  background-color: rgb(202, 177, 151);;
+}
+
+.listElement .okBtn {
+  background-color: rgb(202, 177, 151);
+  font-size: 3rem;
+  color: green;
+  margin-right: 20px;
+  cursor: pointer;
 }

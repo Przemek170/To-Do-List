@@ -40,11 +40,39 @@ const addToList = () => {
       }
     }
 
-    const edit = () => {
-      li.innerHTML = input;
+    const editOn = () => {
+      li.innerHTML = "";
+
+      const editInput = document.createElement("input");
+
+      const okContainer = document.createElement("div");
+      okContainer.classList.add("okContainer");
+
+      const okBtn = document.createElement("button");
+      okBtn.classList.add("okBtn");
+      okBtn.innerHTML = `<i class="fa-solid fa-check"></i>`;
+
+      li.appendChild(editInput);
+      li.appendChild(okContainer);
+
+      okContainer.appendChild(okBtn);
+
+      const editConfirm = () => {
+        if (editInput.value === "") {
+          return;
+        } else {
+          li.innerHTML = editInput.value;
+          li.appendChild(createDiv);
+          li.appendChild(deleteBtn);
+          li.appendChild(editBtn);
+        }
+      };
+
+      okBtn.addEventListener("click", editConfirm);
     };
+
     deleteBtn.addEventListener("click", removeTask);
-    editBtn.addEventListener("click", edit);
+    editBtn.addEventListener("click", editOn);
   }
 };
 
