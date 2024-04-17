@@ -23,9 +23,14 @@ const addToList = () => {
     editBtn.className = "pencil";
     editBtn.innerHTML = `<i class="fa-solid fa-pencil"></i>`;
 
+    const checkbox = document.createElement("div");
+    checkbox.className = "checkbox";
+    checkbox.innerHTML = `<i class="fa-solid fa-square-check"></i>`;
+
     li.appendChild(createDiv);
-    li.appendChild(deleteBtn);
-    li.appendChild(editBtn);
+    createDiv.appendChild(checkbox);
+    createDiv.appendChild(deleteBtn);
+    createDiv.appendChild(editBtn);
 
     list.appendChild(li);
     input.value = "";
@@ -39,6 +44,15 @@ const addToList = () => {
         return;
       }
     }
+    const checkboxSquare = document.querySelectorAll(".fa-square-check");
+    const checkboxSquareArr = Array.from(checkboxSquare);
+
+    for (let i = 0; i < checkboxSquareArr.length; i++) {
+      function toggleColor() {
+        checkboxSquareArr[i].classList.toggle("green");
+      }
+    }
+    checkbox.addEventListener("click", toggleColor);
 
     const editOn = () => {
       li.innerHTML = "";
